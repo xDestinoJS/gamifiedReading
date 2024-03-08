@@ -44,6 +44,7 @@ input:focus-within {
     flex-wrap: wrap;
     align-items: center;
     box-sizing: border-box;
+    overflow:scroll;
 }
 
 #dayCompletions button {
