@@ -94,10 +94,13 @@ function readDay(day) {
     }
 }
 
+let x = 0
+let y = 0
+
 function fireConfetti(){
-    const count = 200,
+    const count = 300,
     defaults = {
-        origin: { y: 0.7 },
+        origin: { y:0.7 },
     };
 
     function fire(particleRatio, opts) {
