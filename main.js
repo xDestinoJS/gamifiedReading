@@ -5,6 +5,7 @@ let titleEl = document.getElementById("titleEl")
 let pageEl = document.getElementById("pageEl")
 let daysEl = document.getElementById("daysEl")
 
+var snd = new Audio("confetti.mp3");
 
 let pages = 0
 let days = 0
@@ -71,7 +72,7 @@ function renderDays(days, completedDays){
             completedDays[index] = parseInt(element)
         });
 
-        if (completedDays.includes(i+1)) newDayButton.classList.add("completed")
+        if (completedDays.includes(i+1)) { newDayButton.classList.add("completed"); }
         else newDayButton.classList.remove("completed")
 
     console.log(completedDays)
@@ -91,6 +92,8 @@ function readDay(day) {
 
     if (button.classList.contains("completed")) {
         fireConfetti()
+        snd.play();
+        snd.currentTime = 0;
     }
 }
 
